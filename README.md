@@ -43,7 +43,8 @@ Removes one trailing *\n* *\r* or *\r\n*.
 Checks if ```seq``` is part of ```str```.
 
 ```cl
-(substring? "string" "ing")  ;; -> #t```
+(substring? "string" "ing")  ;; -> #t
+```
 
 #### (s-collapse-whitespaces str)
 Converts all adjacent white-space characters to a single space.
@@ -84,7 +85,8 @@ If ```str``` is shorter than ```n```, it pads it with ```s``` on the right.
 If ```str``` is longer than ```n```, it cuts down to ```n``` and adds ```seq``` at the end.
 
 ```cl
-(s-truncate "more than life" 7 "...") ;; -> more...```
+(s-truncate "more than life" 7 "...") ;; -> more...
+```
 
 #### (s-left str n)
 Returns up to the ```n``` _first_ characters of ```str```.
@@ -153,37 +155,43 @@ Concatenates ```prefix``` and ```str```.
 Concatenates ```str``` and ```suffix```.
 
 ```cl
-(s-append "runn" "ing")  ;; -> running```
+(s-append "runn" "ing")  ;; -> running
+```
 
 #### (s-lines str)
 Splits str into a list of strings on newline characters.
 
 ```cl
-(s-lines "this\nand\nthat")  ;; -> '("this" "and" "that")```
+(s-lines "this\nand\nthat")  ;; -> '("this" "and" "that")
+```
 
 #### (s-match str seq)
 Matches ```seq``` sequence transformed to regular expression.
 
 ```cl
-(s-match "abcdefg" "^abc")  ;; -> '("abc")```
+(s-match "abcdefg" "^abc")  ;; -> '("abc")
+```
 
 #### (s-match-strings-all str seq)
 Returns a list of matches for regex ```seq``` in ```str```.
 
 ```cl
-(s-match-strings-all "abXabY" "ab." )  ;; -> '("abX" "abY")```
+(s-match-strings-all "abXabY" "ab." )  ;; -> '("abX" "abY")
+```
 
 #### (s-slice-at str seq)
 Slices ```str``` up at every index matching ```seq```.
 
 ```cl
-(s-slice-at "first0second0third" "0")  ;; -> '("first" "0second" "0third")```
+(s-slice-at "first0second0third" "0")  ;; -> '("first" "0second" "0third")
+```
 
 #### (s-split str seq)
 Splits ```str``` into sub-strings bounded to matches for seq separator.
 
 ```cl
-(s-split "onexxtwoxxthree" "xx")  ;; -> '("one" "two" "three")```
+(s-split "onexxtwoxxthree" "xx")  ;; -> '("one" "two" "three")
+```
 
 #### (s-join lst seq)
 Joins all the strings in ```lst``` with ```seq``` in between.
@@ -196,73 +204,85 @@ Joins all the strings in ```lst``` with ```seq``` in between.
 Checks if ```s1``` is equal to ```s2```.
 
 ```cl
-(s-equals "yes" "yes")  ;; -> #t```
+(s-equals "yes" "yes")  ;; -> #t
+```
 
 #### (s-less? s1 s2)
 Checks if ```s1``` is less than ```s2```.
 
 ```cl
-(s-less? "hey" "you")  ;; -> #t```
+(s-less? "hey" "you")  ;; -> #t
+```
 
 #### (s-blank? str)
 Returns true if ```str``` is ```nil``` or _blank_.
 
 ```cl
-(s-blank? "")  ;; -> #t```
+(s-blank? "")  ;; -> #t
+```
 
 #### (s-present? str)
 Returns true if ```str``` is anything but ```nil``` or the empty string.
 
 ```cl
-(s-present? " ")  ;; -> #t```
+(s-present? " ")  ;; -> #t
+```
 
 #### (s-ends-with? str seq)
 Returns true if ```str``` ends with ```seq```.
 
 ```cl
-(s-ends-with? "fishing" "ing")  ;; #t```
+(s-ends-with? "fishing" "ing")  ;; #t
+```
 
 #### (s-starts-with? str seq)
 Returns true if ```str``` starts with ```seq```.
 
 ```cl
-(s-starts-with? "yours" "you")  ;; -> #t```
+(s-starts-with? "yours" "you")  ;; -> #t
+```
 
 #### (s-contains? str seq)
 Returns true if ```str``` contains ```seq```.
 
 ```cl
-(s-contains? "Hamlet" "am")  ;; -> #t```
+(s-contains? "Hamlet" "am")  ;; -> #t
+```
 
 #### (s-lowercase? str)
 Checks if all the letters in ```str``` are lowercase.
 
 ```cl
-(s-lowercase? "strIng")  ;; -> #f```
+(s-lowercase? "strIng")  ;; -> #f
+```
 
 #### (s-uppercase? str)
 Checks if all the letters in ```str``` are uppercase.
 
 ```cl
-(s-uppercase? "DANGLER")  ;; -> #t```
+(s-uppercase? "DANGLER")  ;; -> #t
+```
 
 #### (s-mixedcase? str)
 Checks if there are both uppercase and lowercase in str
 
 ```cl
-(s-mixedcase? "HELLO")  ;; -> #f```
+(s-mixedcase? "HELLO")  ;; -> #f
+```
 
 #### (s-capitalized? str)
 Checks if the first letter is uppercase and the rest are lower case.
 
 ```cl
-(s-capitalized? "HELLO")  ;; -> #f```
+(s-capitalized? "HELLO")  ;; -> #f
+```
 
 #### (s-numeric? str)
 Checks if ```str``` is a number.
 
 ```cl
-(s-numeric? "123")  ;; -> #t```
+(s-numeric? "123")  ;; -> #t
+```
 
 #### (s-downcase str)
 Converts ```str``` to lower case.
