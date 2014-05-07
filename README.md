@@ -2,7 +2,7 @@
 
 -------------------------------------------------------------------------------
 
-A collection of functions and macros for string manipulation.
+A collection of functions and macros for string & word manipulation.
 This lib is inspired by [s-el](https://github.com/magnars/s.el) library created by [Magnars](https://github.com/magnars) for [GNU Emacs](https://www.gnu.org/software/emacs/).
 
 This library has not been tested with long strings and the recommendation is to use it (at least  for the moment) only with short strings.
@@ -10,13 +10,13 @@ This library has not been tested with long strings and the recommendation is to 
 ## Installation
 In terminal:
 
-```sh
+```bash
 raco pkg install s-lib
 ```
 
 After installing it, to use it:
 
-```
+```cl
 (require s-lib)
 ```
 
