@@ -16,7 +16,7 @@ raco pkg install s-lib
 
 After installing it, to use it:
 
-```cl
+```racket
 (require s-lib)
 ```
 
@@ -313,7 +313,7 @@ Converts ```str``` to upper case.
 Replaces ```old``` with ```new``` in ```str```.
 
 ```cl
-(s-replace "The cat eat your tongue" "cat" "monster") ;; -> "The monster eat your tongue"
+(s-replace "The cat ate your tongue" "cat" "monster") ;; -> "The monster ate your tongue"
 ```
 
 #### (s-capitalize str)
