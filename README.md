@@ -8,6 +8,17 @@ This lib is inspired by [s-el](https://github.com/magnars/s.el) library created 
 This library has not been tested with long strings and the recommendation is to use it (at least  for the moment) only with short strings.
 
 ## Installation
+In terminal:
+
+```sh
+raco pkg install s-lib
+```
+
+After installing it, to use it:
+
+```
+(require s-lib)
+```
 
 ## Functions
 
@@ -295,7 +306,8 @@ Converts ```str``` to lower case.
 Converts ```str``` to upper case.
 
 ```cl
-(s-upcase "CamelCase")  ;; -> CAMELCASE```
+(s-upcase "CamelCase")  ;; -> CAMELCASE
+```
 
 #### (s-replace str old new)
 Replaces ```old``` with ```new``` in ```str```.
