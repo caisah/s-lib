@@ -291,7 +291,7 @@
 ;; - if package installed run in terminal:
 ;; raco test s-lib
 ;; - if package not installed; cd to dir and run:
-;; raco test s-lib.rkt
+;; raco test main.rkt
 
 (module+ test
   (require rackunit)
